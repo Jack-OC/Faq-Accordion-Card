@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+
+:root{
+    --primary-font: "Kumbh Sans", sans-serif; 
+
+    --fw-bold: 600;
+    --fw-normal: 400;
+
+   --primary-colour:  hsl(238, 29%, 16%);
+   --secondary-colour: hsl(14, 88%, 65%);
+
+   --background-gradient: linear-gradient(180deg, rgba(175,103,233,1), rgba(101,101,231,1));
+
+   --divider-colour: hsl(240, 5%, 91%);
+   --text-colour-1: hsl(237, 12%, 33%);
+   --text-colour-2: hsl(240, 6%, 50%);
+   --white: hsl(0, 0%, 100%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+ul, li {
+  list-style: none;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  line-height: 1.5;
+}
+
+body {
+    font-family: var(--primary-font);
+    background: var(--background-gradient);
+    background-repeat: no-repeat;
+    color: var(--text-colour-1);
+    font-weight: var(--fw-normal);
+    font-size: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem 1rem;
+}
+
+.accordion-card {
+  width: 330px;
+  position: absolute;
+  border-radius: 1rem;
+  background-color: var(--white);
+  padding: 3rem 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.card-illustration {
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+
+.card-illustration .image {
+  position: relative;
+  display: inherit;
+}
+
+.card-illustration .image .shadow-bg {
+  transform: translateY(-30%);
+}
+
+.card-illustration .image .woman {
+  position: absolute;
+  width: 100%;
+  transform: translateY(-82%);
+}
+
+.box {
+  display: none;
+}
+
+.accordion-card-title {
+  color: var(--primary-colour);
+  font-size: 2rem;
+  font-weight: var(--fw-bold);
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.accordion-section {
+  border-bottom: 0.08rem solid var(--divider-colour);
+}
+
+.accordion-section-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.accordion-section-btn:hover {
+    color: var(--secondary-colour);
+}
+
+.accordion-section[aria-expanded='true']  .accordion-section-btn {
+  color: var(--primary-colour);
+  font-weight: var(--fw-bold);
+}
+
+.accordion-section[aria-expanded='true']  .accordion-section-btn .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-section[aria-expanded='true']  .accordion-section-content {
+  display: block;
+}
+
+.accordion-section-content{
+  display: none;
+  color: var(--text-colour-2);
+  padding-bottom: 0.5rem;
+}
+
+
+@media (min-width: 600px) {
+  body {
+    margin: 0;
+  }
+  
+  .accordion-card {
+    width: 60rem;
+    min-height: 30rem;
+    padding: 0;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .card-illustration .image {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      place-content: center;
+      overflow: hidden;
+  }
+
+  .card-illustration .image .shadow-bg {
+    position: absolute;
+    transform: translate(-60%, -32%);
+  }
+  
+  .card-illustration .image .woman {
+    position: absolute;
+    transform: translate(-18%, 20%);
+  }
+  
+  .box {
+    display: inherit;
+    transform: translate(-125%, 30%);
+  }
+  
+  .accordion-container{
+    padding: 4rem 6rem 4rem 0; 
+  }
+  
+  .accordion-card-title {
+    text-align: left;
+  }
+
+  .accordion-section-btn {
+    font-size: 1rem;
+  }
+
+  .accordion-section-content {
+    font-size: 0.813rem;
+  }
+
+}
