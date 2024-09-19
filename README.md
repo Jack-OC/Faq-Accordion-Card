@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://github.com/Jack-OC/Faq-Accordion-Card)
+- Live Site URL: (https://jack-oc.github.io/Faq-Accordion-Card/)
 
 ## My process
 
